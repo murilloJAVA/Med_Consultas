@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedConsultas</title>
+    <link rel="stylesheet" href="styles/lembretes.css">
+
+    <!-- google icons -->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <div class="icon">+</div>
+        <div>
+            <h1>MedConsultas</h1>
+            <span>Gestão de Saúde</span>
+        </div>
+    </div>
+
+    <nav>
+        <a class="active" href="index.html">Dashboard</a>
+        <a class="active" href="consultas.html" >Consultas</a>
+        <a class="active" href="lembretes.html" >Lembretes</a>
+    </nav>
+</header>
+
+<main>
+
+    <h2>Lembretes</h2>
+    <p class="subtitle">Configure notificações para suas consultas</p>
+
+    <section class="cards">
+       <div class="card">
+        <span class="card-title">Configurações Gerais</span>
+
+        <div class="item-container">
+            <div class="item-left">
+                <span class="circle circle-b">
+                    <span class="material-symbols-outlined email">mark_email_unread</span>
+                </span>
+
+                <div class="text">
+                    <strong>Lembretes por E-mail</strong>
+                    <p>Receba e-mails antes das consultas</p>
+                </div>
+            </div>
+
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+         </div>
+
+        <div class="item-container">
+            <div class="item-left">
+                <span class="circle circle-g">
+                    <span class="material-symbols-outlined sms">sms</span>
+                </span>
+
+                <div class="text">
+                    <strong>Lembretes por SMS</strong>
+                    <p>Receba mensagens de texto</p>
+                </div>
+            </div>
+
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="item-container">
+            <div class="item-left">
+                <span class="circle circle-p">
+                    <span class="material-symbols-outlined notifications">notifications</span>
+                </span>
+
+                <div class="text">
+                    <strong>Notificações Push</strong>
+                    <p>Receba notificações no aplicativo</p>
+                </div>
+            </div>
+
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+        </div>
+        </div>
+    </section>
+    </section>
+
+
+    <!-- lembretes -->
+    <div class="card">
+    <span class="card-title">Lembretes Ativos (2)</span>
+
+    <!-- ITEM 1 -->
+    <div class="reminder-card">
+        <div class="reminder-header">
+            <div class="item-left">
+                <span class="circle circle-b">
+                    <span class="material-symbols-outlined">mail</span>
+                </span>
+
+                <div>
+                    <strong>Dr. Maria Silva</strong>
+                    <div class="meta">
+                        <span class="tag">Cardiologia</span>
+                        <span>10/03/2026 às 14:30</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="reminder-body">
+            <div class="field">
+                <label>Tipo de lembrete:</label>
+                <span class="badge">E-mail</span>
+            </div>
+
+            <div class="field">
+                <label>Avisar com:</label>
+                <select>
+                    <option>1 dia antes</option>
+                    <option>2 dias antes</option>
+                    <option>1 hora antes</option>
+                </select>
+            </div>
+
+            <div class="field switch-field">
+                <label>Ativo:</label>
+
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider-lembretes"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- ITEM 2 -->
+    <div class="reminder-card">
+        <div class="reminder-header">
+            <div class="item-left">
+                <span class="circle circle-p">
+                    <span class="material-symbols-outlined notifications">notifications</span>
+                </span>
+
+                <div>
+                    <strong>Dr. João Santos</strong>
+                    <div class="meta">
+                        <span class="tag">Ortopedia</span>
+                        <span>15/03/2026 às 10:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="reminder-body">
+            <div class="field">
+                <label>Tipo de lembrete:</label>
+                <span class="badge">Notificação</span>
+            </div>
+
+            <div class="field">
+                <label>Avisar com:</label>
+                <select>
+                    <option>2 horas antes</option>
+                    <option>1 dia antes</option>
+                </select>
+            </div>
+
+            <div class="field switch-field">
+                <label>Ativo:</label>
+
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider-lembretes"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</main>
+
+</body>
+</html>
