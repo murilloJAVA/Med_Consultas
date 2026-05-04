@@ -275,11 +275,14 @@ h2 {
    FORMULÁRIO
 ========================= */
 
+/* 🔥 AQUI FOI A CORREÇÃO */
 body.corpo_form {
     display: flex;
+    flex-direction: column; /* 👈 resolve seu problema */
     justify-content: center;
     align-items: center;
     height: 100vh;
+    gap: 10px; /* 👈 espaço entre o card e o texto */
 }
 
 .corpo_form form {
@@ -310,6 +313,22 @@ body.corpo_form {
 .form-control:focus {
     border-color: #2f6df6;
     box-shadow: 0 0 0 2px rgba(47, 109, 246, 0.5);
+}
+
+/* LINK CADASTRO */
+.link-cadastro {
+    text-align: center;
+    font-size: 16px;
+}
+
+.link-cadastro a {
+    color: #2f6df6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-cadastro a:hover {
+    text-decoration: underline;
 }
 
 /* =========================
@@ -366,4 +385,5 @@ body.corpo_form {
     .corpo_form form {
         width: 90%;
     }
+
 }

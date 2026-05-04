@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!form) return;
 
     form.addEventListener("submit", (e) => {
-        e.preventDefault();
+        ewindow.location.href = "dashboard.html";
         const email = document.querySelector("input[type='email']").value;
         const senha = document.querySelector("input[type='password']").value;
 
