@@ -1,0 +1,30 @@
+{
+  "usuarios": [
+    {
+      "id": "1778794775788",
+      "email": "arielmmn@gmail.com",
+      "telefone": "11974165395",
+      "senha": "Arielmmn",
+      "criadoEm": "2026-05-14T21:39:35.788Z"
+    },
+    {
+      "id": "1778794891054",
+      "email": "murilo@gmail.com",
+      "telefone": "11979698003",
+      "senha": "123456",
+      "criadoEm": "2026-05-14T21:41:31.054Z"
+    }
+  ],
+  "consultas": [
+    {
+      "id": "1778794835569",
+      "email": "arielmmn@gmail.com",
+      "nome": "cardiologista",
+      "data": "2026-05-14",
+      "hora": "12:00",
+      "local": "hospital assunção",
+      "criadaEm": "2026-05-14T21:40:35.569Z"
+    }
+  ],
+  "lembretes": {}
+}

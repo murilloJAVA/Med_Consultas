@@ -1,0 +1,57 @@
+/* =============================================
+   MedConsultas — Global Styles
+   Design: Refined medical, clean & professional
+   Fonts: Plus Jakarta Sans + Fraunces
+============================================= */
+
+:root {
+  --blue:        #2f6df6;
+  --blue-hover:  #1a56d6;
+  --blue-light:  #dbeafe;
+  --blue-faint:  #eff6ff;
+  --bg:          #f0f4f9;
+  --surface:     #ffffff;
+  --border:      #e2e8f0;
+  --text:        #0f172a;
+  --text-soft:   #64748b;
+  --red:         #dc2626;
+  --red-bg:      #fef2f2;
+  --red-border:  #fca5a5;
+  --green:       #16a34a;
+  --green-bg:    #f0fdf4;
+  --green-border:#86efac;
+  --radius:      14px;
+  --radius-sm:   8px;
+  --shadow:      0 1px 3px rgba(0,0,0,0.07), 0 4px 16px rgba(0,0,0,0.05);
+  --shadow-lg:   0 8px 32px rgba(47,109,246,0.12);
+  --transition:  0.18s ease;
+  --font:        'Plus Jakarta Sans', sans-serif;
+  --font-display:'Fraunces', serif;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2.5px solid var(--blue);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ── Scrollbar ─────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }

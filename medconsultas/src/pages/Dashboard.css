@@ -1,0 +1,187 @@
+.page { display: flex; flex-direction: column; min-height: 100vh; }
+
+.main {
+  flex: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.page-hero { margin-bottom: 28px; }
+.page-hero h2 {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 300;
+  color: var(--text);
+}
+.subtitle { color: var(--text-soft); font-size: 0.95rem; margin-top: 4px; }
+
+/* Cards de resumo */
+.cards-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.card-stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  box-shadow: var(--shadow);
+  transition: box-shadow var(--transition);
+}
+
+.card-stat:hover { box-shadow: var(--shadow-lg); }
+
+.card-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-soft);
+  margin-bottom: 8px;
+}
+
+.card-value {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--blue);
+  line-height: 1.1;
+}
+
+.card-value--next {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Grid dashboard */
+.grid-dash {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 20px;
+}
+
+/* Calendário */
+.calendar-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.calendar-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  text-align: center;
+}
+
+.cal-header {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-soft);
+  padding: 4px 0;
+  letter-spacing: 0.03em;
+}
+
+.cal-day {
+  padding: 6px 4px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  cursor: default;
+  transition: background var(--transition);
+  color: var(--text);
+}
+
+.cal-today {
+  background: var(--blue);
+  color: #fff;
+  font-weight: 700;
+}
+
+.cal-has-consulta {
+  background: var(--blue-light);
+  color: var(--blue);
+  font-weight: 600;
+  position: relative;
+}
+
+.cal-has-consulta::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: var(--blue);
+  border-radius: 50%;
+  margin: 2px auto 0;
+}
+
+/* Próximas consultas */
+.proximas-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.proximas-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.lista-resumo { display: flex; flex-direction: column; gap: 12px; }
+
+.item-consulta {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.item-icone { font-size: 1.3rem; margin-top: 2px; flex-shrink: 0; }
+
+.item-consulta strong { font-size: 0.95rem; display: block; }
+.item-consulta p { font-size: 0.82rem; color: var(--text-soft); margin-top: 2px; }
+.item-local { color: var(--text-soft) !important; }
+
+.ver-mais {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--blue);
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.texto-vazio { color: var(--text-soft); font-size: 0.9rem; }
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.82rem;
+  color: var(--text-soft);
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+
+@media (max-width: 768px) {
+  .grid-dash { grid-template-columns: 1fr; }
+  .main { padding: 20px 16px; }
+}
