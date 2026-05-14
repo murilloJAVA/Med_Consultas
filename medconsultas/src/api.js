@@ -1,6 +1,4 @@
-/**
- * api.js — Centralizador de chamadas ao servidor Express
- */
+
 
 const BASE = "";
 

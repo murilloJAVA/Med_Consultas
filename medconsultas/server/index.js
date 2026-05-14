@@ -1,7 +1,4 @@
-/**
- * server/index.js — Servidor Express para MedConsultas
- * Persiste todos os dados em data/db.json
- */
+
 
 const express = require("express");
 const cors = require("cors");
@@ -15,10 +12,10 @@ const DB_PATH = path.join(__dirname, "data", "db.json");
 app.use(cors());
 app.use(express.json());
 
-// Servir build do React em produção
+
 app.use(express.static(path.join(__dirname, "../build")));
 
-// ── Helpers de banco JSON ──────────────────────────────────
+
 function lerDB() {
   if (!fs.existsSync(DB_PATH)) {
     const inicial = { usuarios: [], consultas: [], lembretes: {} };
@@ -33,7 +30,7 @@ function salvarDB(dados) {
   fs.writeFileSync(DB_PATH, JSON.stringify(dados, null, 2), "utf-8");
 }
 
-// ── ROTAS: AUTENTICAÇÃO ────────────────────────────────────
+
 
 // Cadastro
 app.post("/api/auth/cadastro", (req, res) => {
@@ -69,7 +66,7 @@ app.post("/api/auth/login", (req, res) => {
   res.json({ mensagem: "Login realizado!", email: usuario.email, id: usuario.id });
 });
 
-// ── ROTAS: CONSULTAS ───────────────────────────────────────
+
 
 // Listar consultas do usuário
 app.get("/api/consultas/:email", (req, res) => {
@@ -115,16 +112,16 @@ app.delete("/api/consultas/:id", (req, res) => {
   res.json({ mensagem: "Consulta excluída." });
 });
 
-// ── ROTAS: LEMBRETES ───────────────────────────────────────
 
-// Buscar preferências de lembretes
+
+
 app.get("/api/lembretes/:email", (req, res) => {
   const { email } = req.params;
   const db = lerDB();
   res.json(db.lembretes[email] || {});
 });
 
-// Salvar preferências de lembretes
+
 app.put("/api/lembretes/:email", (req, res) => {
   const { email } = req.params;
   const db = lerDB();
@@ -133,7 +130,7 @@ app.put("/api/lembretes/:email", (req, res) => {
   res.json(db.lembretes[email]);
 });
 
-// ── Fallback: React SPA ────────────────────────────────────
+
 app.get("*", (req, res) => {
   const buildIndex = path.join(__dirname, "../build/index.html");
   if (fs.existsSync(buildIndex)) {
